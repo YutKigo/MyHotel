@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236AD9A82CD29219008DDA1B /* LostItemDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236AD9A72CD29219008DDA1B /* LostItemDisplayView.swift */; };
 		23A49AC52C89FED9001CC114 /* MyHotelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AC42C89FED9001CC114 /* MyHotelApp.swift */; };
 		23A49AC72C89FED9001CC114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AC62C89FED9001CC114 /* ContentView.swift */; };
 		23A49AC92C89FEDB001CC114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A49AC82C89FEDB001CC114 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236AD9A72CD29219008DDA1B /* LostItemDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostItemDisplayView.swift; sourceTree = "<group>"; };
 		23A49AC12C89FED9001CC114 /* MyHotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A49AC42C89FED9001CC114 /* MyHotelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHotelApp.swift; sourceTree = "<group>"; };
 		23A49AC62C89FED9001CC114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				23F3714A2CA30D37004A07E7 /* GoogleService-Info.plist */,
 				23DD116D2CAD9956009DBBC5 /* ImagePickerView.swift */,
 				23DD116B2CAD8737009DBBC5 /* LostItemSettingView.swift */,
+				236AD9A72CD29219008DDA1B /* LostItemDisplayView.swift */,
 				23A49AD82C91E80B001CC114 /* RoomSetupView.swift */,
 				23A49AC42C89FED9001CC114 /* MyHotelApp.swift */,
 				23A49AC62C89FED9001CC114 /* ContentView.swift */,
@@ -169,6 +172,7 @@
 				23A49AD52C8A085C001CC114 /* FloorView.swift in Sources */,
 				23DD116E2CAD9956009DBBC5 /* ImagePickerView.swift in Sources */,
 				23DD116C2CAD8737009DBBC5 /* LostItemSettingView.swift in Sources */,
+				236AD9A82CD29219008DDA1B /* LostItemDisplayView.swift in Sources */,
 				23A49AD92C91E80B001CC114 /* RoomSetupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

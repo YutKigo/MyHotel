@@ -15,6 +15,7 @@ struct FloorView: View {
     @State var showSheet = false
     @State var showLISVsheet = false
     @State var selectedRoom = 0
+    @State var showLostItemList = false
     
     @State var status1 = ""
     @State var status2 = ""
@@ -32,403 +33,417 @@ struct FloorView: View {
     @State var status14 = ""
     @State var status15 = ""
     
-
-    let seisoutyuu = "清掃中"
     var body: some View {
-        Text("\(floorNumber)F")
-            .font(.largeTitle)
-        
-        VStack {
-            HStack {
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 1
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)01")
-                            .padding()
-                        Text(status1)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status1))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 2
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)02")
-                            .padding()
-                        Text(status2)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status2))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 3
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)03")
-                            .padding()
-                        Text(status3)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status3))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 4
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)04")
-                            .padding()
-                        Text(status4)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status4))
-                    .foregroundColor(.white)
-                }
-                .padding()
-            }
-            .padding()
+        if (showLostItemList == true) {
+            LostItemDisplayView()
+        } else {
+            Text("\(floorNumber)F")
+                .font(.largeTitle)
             
-            HStack {
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 5
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)05")
-                            .padding()
-                        Text(status5)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status5))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 6
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)06")
-                            .padding()
-                        Text(status6)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status6))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 7
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)07")
-                            .padding()
-                        Text(status7)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status7))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 8
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)08")
-                            .padding()
-                        Text(status8)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status8))
-                    .foregroundColor(.white)
-                }
-                .padding()
-            }
-            .padding()
-            
-            HStack {
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 9
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)09")
-                            .padding()
-                        Text(status9)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status9))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 10
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)10")
-                            .padding()
-                        Text(status10)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status10))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 11
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)11")
-                            .padding()
-                        Text(status11)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status11))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 12
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)12")
-                            .padding()
-                        Text(status12)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status12))
-                    .foregroundColor(.white)
-                }
-                .padding()
-            }
-            .padding()
-            
-            HStack {
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 13
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)13")
-                            .padding()
-                        Text(status13)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status13))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 14
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)14")
-                            .padding()
-                        Text(status14)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status14))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    showSheet = true
-                    selectedRoom = floorNumber * 100 + 15
-                } label: {
-                    VStack {
-                        Text("\(floorNumber)15")
-                            .padding()
-                        Text(status15)
-                            .padding()
-                    }
-                    .font(.largeTitle)
-                    .frame(width: 200, height: 200)
-                    .background(setColorByStatus(status: status15))
-                    .foregroundColor(.white)
-                }
-                .padding()
-                
-                Button {
-                    
-                } label: {
-                    Text("\(floorNumber)01")
+            VStack {
+                HStack {
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 1
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)01")
+                                .padding()
+                            Text(status1)
+                                .padding()
+                        }
                         .font(.largeTitle)
                         .frame(width: 200, height: 200)
-                        .background(.white)
+                        .background(setColorByStatus(status: status1))
                         .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 2
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)02")
+                                .padding()
+                            Text(status2)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status2))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 3
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)03")
+                                .padding()
+                            Text(status3)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status3))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 4
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)04")
+                                .padding()
+                            Text(status4)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status4))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
                 }
                 .padding()
-            }//HStack
-            .padding()
-            
-            Button {
-                showLISVsheet = true
-            } label: {
-                Text("忘れ物・設備不良登録")
-                    .font(.title)
-                    .frame(width: 400, height: 60)
-                    .background(.white)
-                    .foregroundColor(.blue)
                 
+                HStack {
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 5
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)05")
+                                .padding()
+                            Text(status5)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status5))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 6
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)06")
+                                .padding()
+                            Text(status6)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status6))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 7
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)07")
+                                .padding()
+                            Text(status7)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status7))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 8
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)08")
+                                .padding()
+                            Text(status8)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status8))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                }
+                .padding()
+                
+                HStack {
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 9
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)09")
+                                .padding()
+                            Text(status9)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status9))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 10
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)10")
+                                .padding()
+                            Text(status10)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status10))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 11
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)11")
+                                .padding()
+                            Text(status11)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status11))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 12
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)12")
+                                .padding()
+                            Text(status12)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status12))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                }
+                .padding()
+                
+                HStack {
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 13
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)13")
+                                .padding()
+                            Text(status13)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status13))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 14
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)14")
+                                .padding()
+                            Text(status14)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status14))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        showSheet = true
+                        selectedRoom = floorNumber * 100 + 15
+                    } label: {
+                        VStack {
+                            Text("\(floorNumber)15")
+                                .padding()
+                            Text(status15)
+                                .padding()
+                        }
+                        .font(.largeTitle)
+                        .frame(width: 200, height: 200)
+                        .background(setColorByStatus(status: status15))
+                        .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("\(floorNumber)01")
+                            .font(.largeTitle)
+                            .frame(width: 200, height: 200)
+                            .background(.white)
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                }//HStack
+                .padding()
+                
+                HStack {
+                    Button {
+                        showLISVsheet = true
+                    } label: {
+                        Text("忘れ物・設備不良登録")
+                            .font(.title)
+                            .frame(width: 400, height: 60)
+                            .background(.white)
+                            .foregroundColor(.blue)
+                        
+                    }
+                    
+                    Button {
+                        showLostItemList = true
+                    } label: {
+                        Text("忘れ物一覧")
+                            .font(.title)
+                            .frame(width: 400, height: 60)
+                            .background(.white)
+                            .foregroundColor(.blue)
+                    }
+                }
+                
+                
+                HStack {
+                    Button {
+                        floorNumber = 2
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("2F")
+                            .font(.largeTitle)
+                    }
+                    Button {
+                        floorNumber = 3
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("3F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 4
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("4F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 5
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("5F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 6
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("6F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 7
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("7F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 8
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("8F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                    
+                    Button {
+                        floorNumber = 9
+                        showAlert = true
+                        setStatusByRoomDataAllInOnece()
+                    } label: {
+                        Text("9F")
+                            .font(.largeTitle)
+                    }
+                    .padding()
+                
+                }
+                
+                
+                
+            }//VStack
+            .onAppear {
+                setStatusByRoomDataAllInOnece()
             }
-            
-            
-            HStack {
-                Button {
-                    floorNumber = 2
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("2F")
-                        .font(.largeTitle)
+            .alert("画面切り替え完了", isPresented: $showAlert) {
+                Button("OK") {
+                    
                 }
-                Button {
-                    floorNumber = 3
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("3F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 4
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("4F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 5
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("5F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 6
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("6F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 7
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("7F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 8
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("8F")
-                        .font(.largeTitle)
-                }
-                .padding()
-                
-                Button {
-                    floorNumber = 9
-                    showAlert = true
-                    setStatusByRoomDataAllInOnece()
-                } label: {
-                    Text("9F")
-                        .font(.largeTitle)
-                }
-                .padding()
-            
+            } message: {
+                let fn: Int = floorNumber
+                Text("\(fn)F画面に切り替えました")
+            }//alert
+            .sheet(isPresented: $showSheet, onDismiss: {setStatusByRoomDataAllInOnece()}) {
+                RoomSetupView(selectedRoom: $selectedRoom)
             }
-            
-            
-            
-        }//VStack
-        .onAppear {
-            setStatusByRoomDataAllInOnece()
-        }
-        .alert("画面切り替え完了", isPresented: $showAlert) {
-            Button("OK") {
-                
+            .sheet(isPresented: $showLISVsheet) {
+                LostItemSettingView()
             }
-        } message: {
-            let fn: Int = floorNumber
-            Text("\(fn)F画面に切り替えました")
-        }//alert
-        .sheet(isPresented: $showSheet, onDismiss: {setStatusByRoomDataAllInOnece()}) {
-            RoomSetupView(selectedRoom: $selectedRoom)
-        }
-        .sheet(isPresented: $showLISVsheet) {
-            LostItemSettingView()
         }
         
         

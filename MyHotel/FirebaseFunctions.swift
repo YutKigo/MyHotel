@@ -50,6 +50,79 @@ class RoomViewModel: ObservableObject {
 }
 
 
+
+struct LostItem: Identifiable {
+    var id: String
+    var date: String
+    var discover: String
+    var lostItem: String
+    var roomNumber: String
+}
+
+class LostItemViewModel: ObservableObject {
+    @Published var lostItems: [LostItem] = []  // 全ての忘れ物データを保持する配列
+    
+    func fetchAllLostItems() {
+        let ref = Database.database().reference(withPath: "lostItem")
+        
+        ref.observeSingleEvent(of: .value) { snapshot in
+            if snapshot.exists() {
+                print("Snapshot exists")
+            } else {
+                print("No snapshot exists")
+            }
+            
+            var newItems: [LostItem] = []  // 新しいリストを作成
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot {
+                    print("Child snapshot: \(childSnapshot.key)")
+                    
+                    // Firebaseから取得したデータをパースする
+                    if let value = childSnapshot.value as? [String: Any],
+                       let date = value["date"] as? String,
+                       let discoverer = value["discoverer"] as? String,
+                       let lostItem = value["lostItem"] as? String,
+                       let roomNumber = value["roomNumber"] as? String {
+                        
+                        // パースしたデータをLostItem構造体として保存
+                        let newItem = LostItem(id: childSnapshot.key, date: date, discover: discoverer, lostItem: lostItem, roomNumber: roomNumber)
+                        newItems.append(newItem)
+                    } else {
+                        print("Could not parse child snapshot")
+                    }
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.lostItems = newItems
+                print("Lost items: \(self.lostItems)")
+            }
+        } withCancel: { error in
+            print("Error fetching data: \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteLostItem(at index: Int) {
+            let item = lostItems[index]
+            let ref = Database.database().reference(withPath: "lostItem/\(item.id)")
+            
+            ref.removeValue { error, _ in
+                if let error = error {
+                    print("Error deleting item: \(error.localizedDescription)")
+                } else {
+                    DispatchQueue.main.async {
+                        self.lostItems.remove(at: index)
+                    }
+                }
+            }
+        }
+}
+
+
+
+
+
+
 /* ----------------- 客室情報取得メソッド ------------------------ */
 /*
 func getRoomInfomationFromFirebase(roomNumber: String) -> Room? {
@@ -254,25 +327,32 @@ func changeConditionToVacant(roomNumber: Int) {
     }
 }
 
-/* 忘れ物登録用？
-func setLostItem(roomNumber: Int, ) {
-    let roomNumberString = String(roomNumber)
+// 忘れ物登録用
+func registerLostItem(roomNumber: String, discoverer: String, date: String, lostItem: String) {
+    let newdateString = date.replacingOccurrences(of: "月", with: ":").replacingOccurrences(of: "年", with: ":").replacingOccurrences(of: "日", with: "::")
+    _ = String(roomNumber)
     let ref = Database.database().reference()
 
-    // 変更するデータのみを辞書として定義
-    let updateData: [String: Any] = [
-        "item" : ""
+    // 忘れ物のデータを辞書として定義
+    let lostItemData: [String: Any] = [
+        "roomNumber": roomNumber,
+        "lostItem": lostItem,
+        "discoverer": discoverer,
+        "date": date
+        
     ]
 
-    // データベースの "rooms" ノードに対して部分的に更新
-    ref.child("rooms").child(roomNumberString).child("lostItem").updateChildValues(updateData) { error, _ in
+    // Firebaseの"rooms"ノードの"lostItems"配列に追加
+    ref.child("lostItem").child("\(newdateString)\(roomNumber)").setValue(lostItemData) { error, _ in
         if let error = error {
-            print("Error updating data: \(error)")
+            print("Error registering lost item: \(error)")
         } else {
-            print("Status successfully updated!")
+            print("Lost item successfully registered!")
         }
     }
-}*/
+}
+
+
 
 
 /*
