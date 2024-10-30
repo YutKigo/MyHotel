@@ -38,6 +38,17 @@ struct LostItemSettingView: View {
             .multilineTextAlignment(.center)
             .border(Color.blue, width: 2)
             
+            TextField("内容を入力", text: $discoverer, prompt:
+                        Text("内容を入力"))
+            .padding()
+            .frame(width: 400, height: 60)
+            .font(.largeTitle)
+            .multilineTextAlignment(.center)
+            .border(Color.blue, width: 2)
+            
+            
+            
+            /*
             Button {
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     print("カメラ利用可能")
@@ -61,14 +72,14 @@ struct LostItemSettingView: View {
             } else {
                 Text("")
                     .frame(width: 400, height: 400)
-            }
+            }*/
             
             Button {
                  
             } label: {
                 Text("登録")
                     .padding()
-                    .frame(width: 400, height: 90)
+                    .frame(width: 400, height: 60)
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                     .border(Color.blue, width: 2)
