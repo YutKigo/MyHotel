@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23A49AC52C89FED9001CC114 /* MyHotelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AC42C89FED9001CC114 /* MyHotelApp.swift */; };
+		23A49AC72C89FED9001CC114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AC62C89FED9001CC114 /* ContentView.swift */; };
+		23A49AC92C89FEDB001CC114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A49AC82C89FEDB001CC114 /* Assets.xcassets */; };
+		23A49ACC2C89FEDB001CC114 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A49ACB2C89FEDB001CC114 /* Preview Assets.xcassets */; };
+		23A49AD52C8A085C001CC114 /* FloorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AD42C8A085C001CC114 /* FloorView.swift */; };
+		23A49AD92C91E80B001CC114 /* RoomSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A49AD82C91E80B001CC114 /* RoomSetupView.swift */; };
+		23DD116C2CAD8737009DBBC5 /* LostItemSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD116B2CAD8737009DBBC5 /* LostItemSettingView.swift */; };
+		23DD116E2CAD9956009DBBC5 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD116D2CAD9956009DBBC5 /* ImagePickerView.swift */; };
+		23F3714B2CA30D37004A07E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F3714A2CA30D37004A07E7 /* GoogleService-Info.plist */; };
+		23F3714E2CA30E3B004A07E7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 23F3714D2CA30E3B004A07E7 /* FirebaseAnalytics */; };
+		23F371502CA30E3B004A07E7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 23F3714F2CA30E3B004A07E7 /* FirebaseDatabase */; };
+		23F371522CA3F044004A07E7 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F371512CA3F044004A07E7 /* FirebaseFunctions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23A49AC12C89FED9001CC114 /* MyHotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A49AC42C89FED9001CC114 /* MyHotelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHotelApp.swift; sourceTree = "<group>"; };
+		23A49AC62C89FED9001CC114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23A49AC82C89FEDB001CC114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23A49ACB2C89FEDB001CC114 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23A49AD42C8A085C001CC114 /* FloorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorView.swift; sourceTree = "<group>"; };
+		23A49AD82C91E80B001CC114 /* RoomSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSetupView.swift; sourceTree = "<group>"; };
+		23DD116B2CAD8737009DBBC5 /* LostItemSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostItemSettingView.swift; sourceTree = "<group>"; };
+		23DD116D2CAD9956009DBBC5 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		23F3714A2CA30D37004A07E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23F371512CA3F044004A07E7 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23A49ABE2C89FED9001CC114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F371502CA30E3B004A07E7 /* FirebaseDatabase in Frameworks */,
+				23F3714E2CA30E3B004A07E7 /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23A49AB82C89FED9001CC114 = {
+			isa = PBXGroup;
+			children = (
+				23A49AC32C89FED9001CC114 /* MyHotel */,
+				23A49AC22C89FED9001CC114 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23A49AC22C89FED9001CC114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23A49AC12C89FED9001CC114 /* MyHotel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23A49AC32C89FED9001CC114 /* MyHotel */ = {
+			isa = PBXGroup;
+			children = (
+				23F3714A2CA30D37004A07E7 /* GoogleService-Info.plist */,
+				23DD116D2CAD9956009DBBC5 /* ImagePickerView.swift */,
+				23DD116B2CAD8737009DBBC5 /* LostItemSettingView.swift */,
+				23A49AD82C91E80B001CC114 /* RoomSetupView.swift */,
+				23A49AC42C89FED9001CC114 /* MyHotelApp.swift */,
+				23A49AC62C89FED9001CC114 /* ContentView.swift */,
+				23F371512CA3F044004A07E7 /* FirebaseFunctions.swift */,
+				23A49AD42C8A085C001CC114 /* FloorView.swift */,
+				23A49AC82C89FEDB001CC114 /* Assets.xcassets */,
+				23A49ACA2C89FEDB001CC114 /* Preview Content */,
+			);
+			path = MyHotel;
+			sourceTree = "<group>";
+		};
+		23A49ACA2C89FEDB001CC114 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23A49ACB2C89FEDB001CC114 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23A49AC02C89FED9001CC114 /* MyHotel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23A49ACF2C89FEDB001CC114 /* Build configuration list for PBXNativeTarget "MyHotel" */;
+			buildPhases = (
+				23A49ABD2C89FED9001CC114 /* Sources */,
+				23A49ABE2C89FED9001CC114 /* Frameworks */,
+				23A49ABF2C89FED9001CC114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyHotel;
+			productName = MyHotel;
+			productReference = 23A49AC12C89FED9001CC114 /* MyHotel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23A49AB92C89FED9001CC114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					23A49AC02C89FED9001CC114 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 23A49ABC2C89FED9001CC114 /* Build configuration list for PBXProject "MyHotel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23A49AB82C89FED9001CC114;
+			packageReferences = (
+				23F3714C2CA30E3B004A07E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 23A49AC22C89FED9001CC114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23A49AC02C89FED9001CC114 /* MyHotel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23A49ABF2C89FED9001CC114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A49ACC2C89FEDB001CC114 /* Preview Assets.xcassets in Resources */,
+				23A49AC92C89FEDB001CC114 /* Assets.xcassets in Resources */,
+				23F3714B2CA30D37004A07E7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23A49ABD2C89FED9001CC114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A49AC72C89FED9001CC114 /* ContentView.swift in Sources */,
+				23F371522CA3F044004A07E7 /* FirebaseFunctions.swift in Sources */,
+				23A49AC52C89FED9001CC114 /* MyHotelApp.swift in Sources */,
+				23A49AD52C8A085C001CC114 /* FloorView.swift in Sources */,
+				23DD116E2CAD9956009DBBC5 /* ImagePickerView.swift in Sources */,
+				23DD116C2CAD8737009DBBC5 /* LostItemSettingView.swift in Sources */,
+				23A49AD92C91E80B001CC114 /* RoomSetupView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23A49ACD2C89FEDB001CC114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23A49ACE2C89FEDB001CC114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23A49AD02C89FEDB001CC114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyHotel/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GT9M3629L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "写真を撮影するためにカメラを利用します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kigoshi.MyHotel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23A49AD12C89FEDB001CC114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyHotel/Preview Content\"";
+				DEVELOPMENT_TEAM = 7GT9M3629L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "写真を撮影するためにカメラを利用します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kigoshi.MyHotel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23A49ABC2C89FED9001CC114 /* Build configuration list for PBXProject "MyHotel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A49ACD2C89FEDB001CC114 /* Debug */,
+				23A49ACE2C89FEDB001CC114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23A49ACF2C89FEDB001CC114 /* Build configuration list for PBXNativeTarget "MyHotel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A49AD02C89FEDB001CC114 /* Debug */,
+				23A49AD12C89FEDB001CC114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23F3714C2CA30E3B004A07E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23F3714D2CA30E3B004A07E7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23F3714C2CA30E3B004A07E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		23F3714F2CA30E3B004A07E7 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23F3714C2CA30E3B004A07E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 23A49AB92C89FED9001CC114 /* Project object */;
+}
